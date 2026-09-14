@@ -1,0 +1,485 @@
+origin: https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+# ═══════════════════════════════════════════════════════════════
+# USER-SPECIFIC FILES
+# ═══════════════════════════════════════════════════════════════
+
+# Visual Studio user settings
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.env
+
+# MonoDevelop / Xamarin Studio
+*.userprefs
+
+# Mono auto generated files
+mono_crash.*
+
+
+# ═══════════════════════════════════════════════════════════════
+# BUILD RESULTS & ARTIFACTS
+# ═══════════════════════════════════════════════════════════════
+
+# Build configuration directories
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+
+[Dd]ebug/x64/
+[Dd]ebugPublic/x64/
+[Rr]elease/x64/
+[Rr]eleases/x64/
+bin/x64/
+obj/x64/
+
+[Dd]ebug/x86/
+[Dd]ebugPublic/x86/
+[Rr]elease/x86/
+[Rr]eleases/x86/
+bin/x86/
+obj/x86/
+
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Aa][Rr][Mm]64[Ee][Cc]/
+bld/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+# Bin directories
+**/[Bb]in/*
+# Uncomment if you have tasks that rely on *.refresh files to move binaries
+# (https://github.com/github/gitignore/pull/3736)
+#!**/[Bb]in/*.refresh
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.idb
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+# but not Directory.Build.rsp, as it configures directory-level build defaults
+!Directory.Build.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# ATL Project build results
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# Benchmark results
+BenchmarkDotNet.Artifacts/
+
+# MSBuild Binary and Structured Log
+*.binlog
+MSBuild_Logs/
+
+# Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+*.rptproj.rsuser
+*- [Bb]ackup.rdl
+*- [Bb]ackup ([0-9]).rdl
+*- [Bb]ackup ([0-9][0-9]).rdl
+
+# BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
+
+# Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
+
+# Visual Studio 6 build log
+*.plg
+
+
+# ═══════════════════════════════════════════════════════════════
+# TESTING & CODE COVERAGE
+# ═══════════════════════════════════════════════════════════════
+
+# MSTest
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Approval Tests
+*.received.*
+
+# Coverlet
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Visual Studio code coverage
+*.coverage
+*.coveragexml
+
+# NCrunch
+_NCrunch_*
+.NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# DotCover
+*.dotCover
+
+# AxoCover
+.axoCover/*
+!.axoCover/settings.json
+
+# MightyMoose
+*.mm.*
+AutoTest.Net/
+
+# Chutzpah
+_Chutzpah*
+
+# OpenCover UI
+OpenCover/
+
+
+# ═══════════════════════════════════════════════════════════════
+# NUGET & DEPENDENCIES
+# ═══════════════════════════════════════════════════════════════
+
+# NuGet packages
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+*.nuget.props
+*.nuget.targets
+
+# Paket dependency manager
+**/.paket/paket.exe
+paket-files/
+
+# Node.js (for VS tooling)
+node_modules/
+.ntvs_analysis.dat
+
+# Bower (uncomment if needed)
+# bower_components/
+
+
+# ═══════════════════════════════════════════════════════════════
+# IDE & EDITOR FILES
+# ═══════════════════════════════════════════════════════════════
+
+# Visual Studio cache
+.vs/
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!?*.[Cc]ache/
+
+# Visual Studio 2017 auto generated files
+Generated\ Files/
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Visual Studio Trace Files
+*.e2e
+
+# Visual Studio History (VSHistory) files
+.vshistory/
+
+# Local History for Visual Studio
+**/.localhistory/
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio 6 workspace options file
+*.opt
+
+# Visual Studio 6 auto-generated workspace file
+*.vbw
+
+# Visual Studio 6 workspace and project files
+*.dsw
+*.dsp
+
+# VS Code files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Ionide (F# VS Code tools)
+**/.ionide/
+
+# MFractors (Xamarin)
+**/.mfractor/
+
+# CodeRush personal settings
+**/.cr/personal
+
+# Tabs Studio
+*.tss
+
+# Telerik JustMock
+*.jmconfig
+
+# GhostDoc
+*.GhostDoc.xml
+
+# Fody - auto-generated XML schema
+FodyWeavers.xsd
+
+
+# ═══════════════════════════════════════════════════════════════
+# CLOUD & CI/CD
+# ═══════════════════════════════════════════════════════════════
+
+# Microsoft Azure — Publish settings
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+PublishScripts/
+
+# Microsoft Azure — Build output
+csx/
+*.build.csdef
+
+# Microsoft Azure — Emulator
+ecf/
+rcf/
+
+# Azure Stream Analytics
+ASALocalRun/
+
+# AWS SAM
+.aws-sam
+
+# TeamCity
+_TeamCity*
+
+# FAKE — F# Make
+**/.fake/
+
+
+# ═══════════════════════════════════════════════════════════════
+# DATABASES
+# ═══════════════════════════════════════════════════════════════
+
+# SQLite (Local development)
+*.db
+*.db-shm
+*.db-wal
+
+# SQL Server
+*.mdf
+*.ldf
+*.ndf
+
+# PostgreSQL (Development artifacts & sockets)
+*.pgdata
+*.pgpass
+postmaster.pid
+postmaster.opts
+
+# BeatPulse healthcheck temp database
+healthchecksdb
+
+# General database dumps and exports (Safe for any DB)
+*.sql
+*.sql.gz
+*.bak
+*.dump
+*.bin
+
+# Exceptions — Entity Framework Core migrations
+!**/Migrations/*.sql
+
+
+# ═══════════════════════════════════════════════════════════════
+# SECRETS & SECURITY
+# ═══════════════════════════════════════════════════════════════
+
+# Certificates and keys
+*.pfx
+*.publishsettings
+
+# Strong name files (security risk — keep commented unless needed)
+#*.snk
+
+# NVidia Nsight GPU debugger config
+*.nvuser
+
+
+# ═══════════════════════════════════════════════════════════════
+# WEB & FRONTEND
+# ═══════════════════════════════════════════════════════════════
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Click-Once
+publish/
+
+# Windows Store app packages
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+*.appxbundle
+*.appxupload
+
+# Web workbench (Sass)
+.sass-cache/
+
+# Installshield
+[Ee]xpress/
+
+# Python Tools for Visual Studio (PTVS)
+**/__pycache__/
+*.pyc
+
+# RIA / Silverlight
+Generated_Code/
+
+# ClientBin
+ClientBin/
+
+
+# ═══════════════════════════════════════════════════════════════
+# MISC & TEMP FILES
+# ═══════════════════════════════════════════════════════════════
+
+# Temp and swap files
+~$*
+*~
+*.tmp
+
+# Other generated files
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+orleans.codegen.cs
+
+# TFS 2012 Local Workspace
+$tf/
+
+# Guidance Automation Toolkit
+*.gpState
+
+# StyleCop
+StyleCopReport.xml
+
+# DocProject
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+# Windows Installer files from build outputs
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+
+# ═══════════════════════════════════════════════════════════════
+# UPGRADES & BACKUPS
+# ═══════════════════════════════════════════════════════════════
+
+# Backup & report files from converting old project files
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+*.rptproj.bak
+
+# Backup folder for Package Reference Convert tool (VS 2017)
+MigrationBackup/
+
+# Microsoft Fakes
+FakesAssemblies/
+
+# Cake (uncomment if using it)
+#tools/**
+#!tools/packages.config
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
