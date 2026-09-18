@@ -6,5 +6,8 @@ internal enum CommandOperation
     Get,
     Update,
     Delete,
-    Exists
+    Exists,
+    Expire,
+    Ttl,
+    Persist
 }
