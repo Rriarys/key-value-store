@@ -6,6 +6,7 @@ A small client-server in-memory key-value store built with .NET 10.
 
 - `KeyValueStore.Server` — TCP server and in-memory storage
 - `KeyValueStore.Client` — interactive TCP client
+- `KeyValueStore.Server.Tests` — automated server tests
 
 ## Run
 
@@ -92,6 +93,12 @@ Requests and responses are UTF-8 JSON lines exchanged over TCP. Supported operat
 - TTL values must be positive integers
 - All data is stored in memory and is lost when the server stops
 
-## Status
+## Testing
 
-This project is under development.
+Run all tests from the solution directory:
+
+```sh
+dotnet test
+```
+
+The test project is `KeyValueStore.Server.Tests`.
