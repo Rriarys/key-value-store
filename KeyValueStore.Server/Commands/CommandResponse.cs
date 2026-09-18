@@ -40,7 +40,7 @@ internal sealed class CommandResponse
     {
         return new CommandResponse(
             success: true,
-            message: exists ? "Key exists." : "Key does not exist.",
+            message: exists ? "Key exists" : "Key does not exist",
             exists: exists
             );
     }
