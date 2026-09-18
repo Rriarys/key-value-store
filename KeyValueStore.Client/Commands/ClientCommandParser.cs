@@ -44,21 +44,24 @@ public sealed class ClientCommandParser
             return true;
         }
 
-        if (operation is not ("SET" or "GET" or "UPDATE" or "DELETE" or "EXISTS"))
+        if (operation is not ("SET" or "GET" or "UPDATE" or "DELETE" or "EXISTS" or "EXPIRE" or "TTL" or "PERSIST"))
         {
             errorMessage = $"Unknown command: {arguments[0]}";
             return false;
         }
 
-        var requiredArguments = operation is "SET" or "UPDATE" ? 3 : 2;
+        var requiresValue = operation is "SET" or "UPDATE";
+        var requiresSeconds = operation == "EXPIRE";
+        var requiredArguments = requiresValue ? 3 : requiresSeconds ? 3 : 2;
 
-        if (arguments.Length < requiredArguments)
+        if (arguments.Length < requiredArguments || (requiresValue && arguments.Length is not (3 or 5)))
         {
             errorMessage = $"{operation} requires a key{(requiredArguments == 3 ? " and a value" : "")}";
             return false;
         }
 
-        if (arguments.Length > requiredArguments)
+        if ((!requiresValue && arguments.Length != requiredArguments) ||
+            (requiresValue && arguments.Length == 5 && !string.Equals(arguments[3], "EX", StringComparison.OrdinalIgnoreCase)))
         {
             errorMessage = $"{operation} received too many arguments";
             return false;
@@ -72,14 +75,33 @@ public sealed class ClientCommandParser
             return false;
         }
 
-        var value = requiredArguments == 3 ? arguments[2] : null;
+        var value = requiresValue ? arguments[2] : null;
+        int? ttlSeconds = null;
+
+        if (requiresSeconds || (requiresValue && arguments.Length == 5))
+        {
+            var secondsArgument = requiresSeconds ? arguments[2] : arguments[4];
+
+            if (!int.TryParse(secondsArgument, out var parsedSeconds) || parsedSeconds <= 0)
+            {
+                errorMessage = "TTL seconds must be a positive integer";
+                return false;
+            }
+
+            ttlSeconds = parsedSeconds;
+            if (requiresSeconds)
+            {
+                value = null;
+            }
+        }
 
         requestJson = JsonSerializer.Serialize(
             new
             {
                 operation,
                 key,
-                value
+                value,
+                seconds = ttlSeconds
             },
             JsonOptions);
 

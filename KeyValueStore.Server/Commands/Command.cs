@@ -9,7 +9,13 @@ internal sealed class Command
     public CommandOperation Operation { get; }
     public string Key { get; }
     public string? Value { get; }
-    public Command(CommandOperation operation, string key, string? value = null)
+    public int? TtlSeconds { get; }
+
+    public Command(
+        CommandOperation operation,
+        string key,
+        string? value = null,
+        int? ttlSeconds = null)
     {
         if (string.IsNullOrWhiteSpace(key))
         {
@@ -21,8 +27,14 @@ internal sealed class Command
             throw new ArgumentException("Value cannot be null or whitespace for Set or Update operations.", nameof(value));
         }
 
+        if (ttlSeconds is <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(ttlSeconds), "TTL must be positive.");
+        }
+
         Operation = operation;
         Key = key;
         Value = value;
+        TtlSeconds = ttlSeconds;
     }
 }
