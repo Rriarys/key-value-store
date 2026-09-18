@@ -1,14 +1,14 @@
-# KeyValueStore
+# Key Value Store 🗄️
 
 A small client-server in-memory key-value store built with .NET 10.
 
-## Projects
+## Projects 📦
 
-- `KeyValueStore.Server` — TCP server and in-memory storage
-- `KeyValueStore.Client` — interactive TCP client
-- `KeyValueStore.Server.Tests` — automated server tests
+- `KeyValueStore.Server` — TCP server and in-memory storage 🖥️
+- `KeyValueStore.Client` — interactive TCP client 💻
+- `KeyValueStore.Server.Tests` — automated server tests 🧪
 
-## Run
+## Run ▶️
 
 Start the server on port 5000:
 
@@ -28,7 +28,7 @@ Connect the client:
 dotnet run --project KeyValueStore.Client -- localhost 5000
 ```
 
-## Commands
+## Commands ⚙️
 
 | Command | Description |
 | --- | --- |
@@ -44,7 +44,7 @@ dotnet run --project KeyValueStore.Client -- localhost 5000
 | `PERSIST key` | Remove expiration and make the key persistent |
 | `EXIT` | Exit the client |
 
-## TTL result codes
+## TTL result codes ⏱️
 
 The `TTL` result is returned in the response `value` field.
 
@@ -64,7 +64,7 @@ Example TTL responses:
 
 TTL values are rounded down to whole seconds. An active key with less than one second remaining returns `1`.
 
-## Response format
+## Response format 📄
 
 Responses use JSON:
 
@@ -81,11 +81,11 @@ Example error response:
 {"success":false,"message":"Key not found"}
 ```
 
-## TCP protocol
+## TCP protocol 🌐
 
 Requests and responses are UTF-8 JSON lines exchanged over TCP. Supported operations are `set`, `get`, `update`, `delete`, `exists`, `expire`, `ttl`, and `persist`.
 
-## Limitations
+## Limitations ⚠️
 
 - Keys and values cannot contain spaces
 - Keys cannot be empty
@@ -93,7 +93,7 @@ Requests and responses are UTF-8 JSON lines exchanged over TCP. Supported operat
 - TTL values must be positive integers
 - All data is stored in memory and is lost when the server stops
 
-## Testing
+## Testing 🧪
 
 Run all tests from the solution directory:
 
