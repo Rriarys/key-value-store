@@ -1,7 +1,7 @@
-﻿namespace KeyValueStore.Server.Storage;
+﻿namespace KeyValueStore.Server.Data;
 
 // Storage for KeyValueEntry objects
-internal class KeyValueStore
+internal class InMemoryKeyValueStore
 {
     private readonly Dictionary<string, KeyValueEntry> _store = new();
     public void Set(KeyValueEntry entry)

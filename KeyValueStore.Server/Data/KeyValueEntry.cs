@@ -1,4 +1,4 @@
-﻿namespace KeyValueStore.Server.Storage;
+﻿namespace KeyValueStore.Server.Data;
 
 internal class KeyValueEntry
 {
